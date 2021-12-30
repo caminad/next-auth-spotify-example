@@ -12,6 +12,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+}
+
+.main :any-link {
+  color: #0070f3;
+  font-weight: 700;
 }
 
 .footer {
@@ -28,17 +34,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
   text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
 }
 
 .title {
@@ -52,13 +48,20 @@
   all: unset;
   outline: revert;
   cursor: pointer;
-  border: 2px solid currentColor;
+  color: white;
+  background-color: var(--accent-color, black);
   border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 1rem 2rem;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  transition: all ease 75ms;
+}
+
+.button:is(:hover, :focus):not(:disabled, :active) {
+  transform: scale(1.05);
 }
 
 .button:disabled {
   cursor: not-allowed;
+  opacity: 0.5;
 }
