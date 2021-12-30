@@ -36,7 +36,7 @@ const Home: NextPage = () => {
             <button
               className={styles.button}
               type="button"
-              style={{ '--accent-color': '#1db954' }}
+              style={{ '--accent-color': '#15883e' }}
               onClick={() => signIn('spotify')}
               disabled={session.status === 'loading'}
             >
