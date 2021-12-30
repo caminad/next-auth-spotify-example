@@ -1,6 +1,7 @@
 {
   "name": "next-auth-spotify-example",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
