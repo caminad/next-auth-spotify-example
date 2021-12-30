@@ -1,5 +1,7 @@
 .container {
   padding: 0 2rem;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .main {
@@ -44,4 +46,19 @@
   line-height: 1.15;
   font-size: 4rem;
   text-align: center;
+}
+
+.button {
+  all: unset;
+  outline: revert;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 9999px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.button:disabled {
+  cursor: not-allowed;
 }

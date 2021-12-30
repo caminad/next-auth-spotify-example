@@ -16,16 +16,21 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Hello, {session.data?.user?.name || 'stranger'}! Welcome to{' '}
-          <a href="https://nextjs.org">Next.js!</a>
+          Hello, {session.data?.user?.name || 'stranger'}!<br />
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <p>
           {session.status === 'authenticated' ? (
-            <button type="button" onClick={() => signOut()}>
-              Sign out
+            <button
+              className={styles.button}
+              type="button"
+              onClick={() => signOut()}
+            >
+              Sign out {session.data.user?.email}
             </button>
           ) : (
             <button
+              className={styles.button}
               type="button"
               onClick={() => signIn('spotify')}
               disabled={session.status === 'loading'}
